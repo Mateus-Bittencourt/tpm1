@@ -115,7 +115,7 @@ router.post("/listModels", async (req, res, next) => {
     );
 
     if (!brand) {
-      throw new Error("Brand not found");
+      res.send([]);
     }
 
     res.send(brand.models);
